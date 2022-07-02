@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { handleCartProduct } from '../redux/features/productsSlice';
 import Button from './Button';
 import { Product } from '../utils/types';
 import styled from 'styled-components';
@@ -7,12 +9,22 @@ export default function ProductCard(props: { key: number, dataCard: Product }) {
   const [inputValue, setInputValue] = useState(0);
   const { dataCard } = props;
 
+  const dispatch = useDispatch();
+
   const handleIncrement = (e: any) => {
     e.preventDefault()
+  
+    const product = { ...dataCard, quantity: inputValue + 1 };
 
+    dispatch(handleCartProduct(product));
+    
     setInputValue(inputValue + 1);
+    
   };
 
+  const imgResizer = (url: string) => {
+    return (url.replace("h=515,", "h=178,"))
+  }
   const numberToBRL = (value: string) => {
     return (value.replace(/\./, ','))
   }
@@ -100,7 +112,7 @@ export default function ProductCard(props: { key: number, dataCard: Product }) {
   return (
     <CardContainer>
       <img
-        src={dataCard.image}
+        src={imgResizer(dataCard.image)}
         alt={dataCard.name}
         data-testid={`products_img-card-bg-image-${dataCard.id}`}
       />
