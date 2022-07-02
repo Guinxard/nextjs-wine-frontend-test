@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { CartProduct } from '../../components/componentTypes';
+import { CartProduct } from '../../components/utils';
 
 const calculatePrice = (productList: CartProduct[]) => productList.reduce(
   (sum, product) => sum + (+product.price * product.quantity), 0,
