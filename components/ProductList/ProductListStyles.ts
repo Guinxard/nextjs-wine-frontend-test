@@ -23,6 +23,24 @@ max-width:74%;
   button {
     margin: 10px;
   }
+  .selected-page {
+      color: #FFFFFF;
+      background-color:#ae1586;
+      border: none;
+      border-radius: 17.5%;
+      box-shadow: 0px 0.973384px 1.94677px rgba(0,0,0,0.2);
+      padding: 20px;
+    }
+    .page-selector-button {
+      color: #ae1586;
+      border-color: #ae1586;
+      border: none;
+      outline-style: outset;
+      padding: 15px;
+      border-radius: 6.5%;
+      box-shadow: 0px 0.973384px 1.94677px rgba(0,0,0,0.2);
+      min-width: fit-content;
+    }
 }
 `
 
