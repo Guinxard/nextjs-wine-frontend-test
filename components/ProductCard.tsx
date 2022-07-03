@@ -13,14 +13,11 @@ export default function ProductCard(props: { key: number, dataCard: Product }) {
   const dispatch = useDispatch();
 
   const handleIncrement = (e: any) => {
-    e.preventDefault()
-  
     const product = { ...dataCard, quantity: inputValue + 1 };
 
     dispatch(handleCartProduct(product));
     
     setInputValue(inputValue + 1);
-    
   };
 
   return (

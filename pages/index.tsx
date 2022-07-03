@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { HeaderContainer, Container } from './HeaderStyles';
 import { myProfile, searchIcon } from '../assets/HeaderIcons'
 import Button from '../components/Button';
-import { SVGComponent } from '../public/svgviewer-react-output'
+import { SVGComponent } from '../assets/svgviewer-react-output'
 
 import { useState } from 'react';
 

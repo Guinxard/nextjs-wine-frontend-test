@@ -16,7 +16,7 @@ export const CardContainer = styled.div`
   line-height: 19px;
   margin-block: 4px;
   max-width: 31%;
-  width: 31%;
+  width: 20.3%;
   min-width: 209.66px;
   text-align: center;
 
@@ -81,4 +81,4 @@ export const CardContainer = styled.div`
       width: 100%;
       border-width: 0;
   }
-  `;
+}`;

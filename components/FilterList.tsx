@@ -2,9 +2,7 @@ import { useState } from "react";
 import { priceFilter } from "./utils"
 import styled from 'styled-components';
 
-// priceFilter(products, productFilter[0], productFilter[1], membership)
-
-export default function FilterList({ productList, priceFilterHandle, selectedFilters }: any) {
+export default function FilterList({ products, productList, priceFilterHandle, selectedFilters }: any) {
   
   const priceRange = {
     'Até R$100': priceFilter(productList, 0, 100),
@@ -15,8 +13,9 @@ export default function FilterList({ productList, priceFilterHandle, selectedFil
   }
   const nullHandler = priceFilter(productList, 0, 0);
   const FilterListContainer = styled.aside`
-    margin-inline: 30px;
+    padding-inline: 30px;
     min-width: max-content;
+    width: 18%;
     label {
       display: block;
     }

@@ -1,3 +1,5 @@
+import { Product } from "./types";
+
  
 export const fetchProducts = async(requestOptions:RequestInit) => {
   const response = await fetch
@@ -5,4 +7,4 @@ export const fetchProducts = async(requestOptions:RequestInit) => {
   const data = await response.json();
   const products = data.items;
   return products
-  }
+}

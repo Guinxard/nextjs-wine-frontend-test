@@ -18,15 +18,20 @@ export const discountColor = (discount: number) => {
   )[0]
 
   return (filteredColor[1])
-}
+};
 
 export const imgResizer = (url: string) => {
   return (url.replace("h=515,", "h=178,"))
-}
+};
 
 export const numberToBRL = (value: string) => {
   return (value.replace(/\./, ','))
-}
+};
+
+export const classPageSelector = (page:number, index:number) => {
+  if (page === index) return 'selected-page'
+  return 'page-selector-button'
+};
 
 export const priceFilter = (products: Product[], lowValue: number = 0, topValue: number = 0, membership: boolean = false) => {
   if (topValue === 0) return (products.filter((item) => lowValue <= item.priceMember));
