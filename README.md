@@ -17,7 +17,7 @@
 ---
 
 <p align="center"> Few lines describing your project.
-    <br> 
+    Este projeto ainda está em desenvolvimento, e há muita coisa para implementar e melhorar, porém representa muito aprendizado, dedicação e paixão por tecnologia.
 </p>
 
 ## 📝 Table of Contents
@@ -34,81 +34,66 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Este projeto foi desenvolvido como um teste técnico desenvolvido pela empresa Wine, porém ao mesmo tempo foi um grande desafio e aprendizado. 
+O framework utilizado foi o nextJS, porém decidi aplicar também o redux toolkit como ferramenta de gerenciamento de estados, e na verdade, tentei utilizar o máximo de tecnologias possíveis, o quê, como consequência também me fez gastar um bom tempo com adaptações. Contudo, espero que você goste desse projeto que foi feito com muita dedicação e investimento, e agradeço pelos feedbacks, code reviews e :cookie:s!
+
+Ah! O deploy do projeto foi feito através da plataforma Vercel! E você pode conferir neste endereço aqui => https://nextjs-wine-frontend-test.vercel.app/.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them.
-
-```
-Give examples
-```
+Caso queira rodar este projeto na própria máquina, é necessário utilizar NPM ou Yarn! Fora isso, não existem pre-requisitos.
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
+A instalação das dependências deve ser feita utilizando NPM, mas algumas dependências são exclusivas pra desenvolvimento!
 
 ```
-Give the example
+"npm install"
+
+ou
+
+"yarn install"
+
 ```
 
-And repeat
+Assim que a instalação acabar, você poderá fazer a build para a versão em produção:
 
-```
-until finished
-```
+npm run build
 
-End with an example of getting some data out of the system or using it for a little demo.
+talvez leve algum tempo, mas funciona! :smiley:
+
+Após a finalização da build é só utilizar npm start, e o projeto deve estar disponível em localhost:3000. 
+
+:warning: É importante que a porta 3000 esteja livre, caso contrário você não conseguirá acessar!! :warning:
+
+Contudo, ainda assim será possível rodar o projeto em ambiente de desenvolvimento utilizando o comando npm run dev. Porém é importante ressaltar que o NextJs tem algumas limitações em ambiente de desenvolvimento e o caching pode não funcionar adequadamente.
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
+Esta seção está entre as minhas pŕoximas metas, pois ainda não consegui fazer a utilização adequada do cypress. por este motivo ele está incluso nos pacotes do projeto, porém não implementado. O mesmo vale para o Jest, afinal uma das próximas metas será também implementar testes unitários. 
 
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+Basicamente você pode acessar um catálogo de vinhos disponibilizado pela Wine para testes como este. É possível colocar itens no carrinho, será possível verificar através do localStorege na aba application no seu navegador favorito, também é possível realizar a filtragem através de preços e visualizar os detalhes de cada produto, como média de avalialção do vinho específico, comentários dos sommeliers e várias outras informações. Infelizmente, porém, o banco de dados é um mock, e portanto os produtos se repetem por diversas vezes. :sweat_smile::sweat_smile:
 
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
+- [NextJS](https://nextjs.org/) - Web framework
+- [ReactJS](https://pt-br.reactjs.org/) - Front-End library
+- [Redux toolkit](https://redux-toolkit.js.org/) - State Management Library
+- [Styled Components](https://styled-components.com/) - Styling
+- [Cypress](https://www.cypress.io/) - End to end testing
+- [Jest](https://jestjs.io/pt-BR/) - Unit testing
+- [ESlint](https://eslint.org/) - Unit testing
 - [NodeJs](https://nodejs.org/en/) - Server Environment
+- [Vercel](https://vercel.com/dashboard) - Deploy
 
 ## ✍️ Authors <a name = "authors"></a>
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+Só eu mesmo, mas esse cara aqui me deu uma mão com o readme através da extensão SympleReadme!
+Fica aí o biscoito para @kylelobo (https://github.com/kylelobo) :cookie:
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+Ah, e não dá pra esquecer dos meus colegas, tutores e amigos da @trybe (https://betrybe.com/), com quem aprendi e me inspirei ao longo desse primeiro ano de estudos de desenvolvimento Web.
 
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+Mais uma vez, muito obrigado pela atenção! Espero que esse código seja útil a você que está lendo isso.
