@@ -22,7 +22,10 @@ export const CardContainer = styled.div`
 
   img {
     background: #FFFFFF;
+    display:block;
     max-width: fit-content; 
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .product-name {
@@ -81,4 +84,9 @@ export const CardContainer = styled.div`
       width: 100%;
       border-width: 0;
   }
+  button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+  } 
 }`;

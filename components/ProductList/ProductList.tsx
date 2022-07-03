@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Product } from '../utils/types';
+import { Product } from '../../utils/types';
 import FilterList from './FilterList';
-import ProductCard from './ProductCard';
+import ProductCard from '../ProductCard/ProductCard';
 import { Container, ProductListContainer, ProductListHeader, ProductListMain } from './ProductListStyles'
-import Button from './Button';
-import {classPageSelector} from './utils'
+import Button from '../Button';
+import {classPageSelector} from '../utils'
+import ProductOverlayCard from '../ProductOverlayCartd/ProductOverlayCard';
+import styled from 'styled-components';
 
 export default function ProductList({ productList, searchText }: any) {
   const [products, setProducts] = useState(productList);
@@ -56,8 +58,10 @@ export default function ProductList({ productList, searchText }: any) {
       if (selectedFilters.length === 2) setProducts(productList)
     }
   }
+  const OverlayCardContainer = styled.div`
+ 
+`
 
-  console.log(products.slice(FIRSTPAGEITEM, LASTPAGEITEM));
 
   return (
     <Container>
@@ -71,7 +75,8 @@ export default function ProductList({ productList, searchText }: any) {
           <ProductListContainer>
             {
               (products) && products.slice(FIRSTPAGEITEM, LASTPAGEITEM).map((product: Product, index: number) => (
-                <ProductCard key={index} dataCard={product} />
+                  <><ProductCard key={index} dataCard={product} /><ProductOverlayCard key={8000 + index} dataCard={product} /></>
+                  
               ))
             }
           </ProductListContainer>

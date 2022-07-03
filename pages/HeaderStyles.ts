@@ -9,15 +9,21 @@ max-height:1516px;
 `;
 
 export const HeaderContainer = styled.nav`
+
   align-items: center;
   display: flex;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
   height:6%;
   justify-content: space-around;
+  line-height: 24px;
   margin: 10px;
   padding-inline: 15px;
   a {
     align-items: stretch;
     box-sizing:border-box;
+    color: #555555;
     display: flex;
     height: 100%;
     padding-block: 20px;

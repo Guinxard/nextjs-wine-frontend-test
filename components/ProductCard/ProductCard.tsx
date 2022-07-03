@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { handleCartProduct } from '../redux/features/productsSlice';
-import Button from './Button';
-import { Product } from '../utils/types';
-import { discountColor, imgResizer, numberToBRL } from './utils';
+import { handleCartProduct } from '../../redux/features/productsSlice';
+import Button from '../Button';
+import { Product } from '../../utils/types';
+import { discountColor, imgResizer, numberToBRL } from '../utils';
 import { CardContainer } from './CardStyles';
 
 export default function ProductCard(props: { key: number, dataCard: Product }) {
@@ -22,8 +22,9 @@ export default function ProductCard(props: { key: number, dataCard: Product }) {
 
   return (
     <CardContainer>
+      <a href={`#popup${dataCard.id}`}>
       <img
-        src={imgResizer(dataCard.image)}
+        src={imgResizer(dataCard.image, 178)}
         alt={dataCard.name}
         data-testid={`products_img-card-bg-image-${dataCard.id}`}
       />
@@ -41,6 +42,7 @@ export default function ProductCard(props: { key: number, dataCard: Product }) {
       <div className='general-price'>
         NÃO SÓCIO R$ {numberToBRL(`${(dataCard.priceNonMember).toFixed(2)}`)}
       </div>
+      </a>
       <div className='add-button-container'>
         <Button
           text="ADICIONAR"

@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import { fetchProducts } from '../utils/services'
 import { IHomePageProps } from '../utils/types';
-import ProductList from '../components/ProductList'
+import ProductList from '../components/ProductList/ProductList'
 import Link from 'next/link';
 import { HeaderContainer, Container } from './HeaderStyles';
 import { myProfile, searchIcon } from '../assets/HeaderIcons'

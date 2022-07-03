@@ -1,6 +1,4 @@
-import { Product } from "./types";
 
- 
 export const fetchProducts = async(requestOptions:RequestInit) => {
   const response = await fetch
   ("https://wine-back-test.herokuapp.com/products", requestOptions);

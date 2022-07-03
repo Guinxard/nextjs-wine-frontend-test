@@ -20,8 +20,17 @@ export const discountColor = (discount: number) => {
   return (filteredColor[1])
 };
 
-export const imgResizer = (url: string) => {
-  return (url.replace("h=515,", "h=178,"))
+export const wineColor: any =  {
+  "Branco": '##e0d291',
+  "Espumante": '##e0d291',
+  "Frisante": '#75194f',
+  "Licoroso": 'transparent',
+  "Rosé": '#f08c6f',
+  "Tinto": '#75194f',
+};
+
+export const imgResizer = (url: string, height:number) => {
+  return (url.replace("h=515,", `h=${height},`))
 };
 
 export const numberToBRL = (value: string) => {
