@@ -64,7 +64,7 @@ export const HeaderContainer = styled.nav`
 export default function Home({ products }: IHomePageProps) {
   const [searchText, setSearchText] = useState('')
   const [showSearchBar, setShowSearchBar] = useState(false);
-  console.log(products);
+  
 
   return (
     <Container>

@@ -29,11 +29,11 @@ export default function ProductList({ productList, searchText }: any) {
     return pageNum;
   };
 
-  const handleSearch = () => {
-    const results = products.filter((product: Product) => product
-    .name.toLowerCase().includes(searchText.toLowerCase()))
-    setProducts(results);
-  }
+  // const handleSearch = () => {
+  //   const results = products.filter((product: Product) => product
+  //   .name.toLowerCase().includes(searchText.toLowerCase()))
+  //   setProducts(results);
+  // }
 
   useEffect(() => {
     const userStorage = localStorage.getItem('user');
@@ -81,13 +81,13 @@ export default function ProductList({ productList, searchText }: any) {
             }
           </ProductListContainer>
           <div className='bottom-liner'>
-            {page === 1 ? null : <Button text='<< Anterior' onClick={() => setPage(page - 1)} dataTestId={'previous_page_button'} disabled={false}></Button>}
+            {page === 1 ? null : <Button className='page-selector-button' text='<< Anterior' onClick={() => setPage(page - 1)} dataTestId={'previous_page_button'} disabled={false}></Button>}
             {pageSelector().map((i) => (
               i !== '...'
                 ? <Button className={classPageSelector(page,+i)} text={i} key={i} onClick={() => setPage(+i)} dataTestId={`${i}_page_button`} disabled={false}/>
                 : <span key={i}>. . .</span>)
             )}
-            {page === MAXPAGES ? null : <Button text='Próxima >>' onClick={() => setPage(page + 1)} dataTestId={'next_page_button'} disabled={false}></Button>}
+            {page === MAXPAGES ? null : <Button className='page-selector-button' text='Próxima >>' onClick={() => setPage(page + 1)} dataTestId={'next_page_button'} disabled={false}></Button>}
           </div>
         </div>
       </ProductListMain>
