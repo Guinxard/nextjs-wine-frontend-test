@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const CardContainer = styled.div`
   align-items: center;
   box-shadow: 0px 9.73384px 14.6008px rgba(0, 0, 0, 0.1);
+  box-sizing:border-box;
   color: #1D1D1B;
   display:flex;
   flex-direction: column;
@@ -14,9 +15,10 @@ export const CardContainer = styled.div`
   letter-spacing: -0.222488px;
   line-height: 19px;
   margin-block: 4px;
-  height: 333px;
-  text-align: center;
+  max-width: 31%;
   width: 31%;
+  min-width: 209.66px;
+  text-align: center;
 
   img {
     background: #FFFFFF;
@@ -26,6 +28,7 @@ export const CardContainer = styled.div`
   .product-name {
     padding: auto;
     min-height: 38px;
+    min-width: 191px;
     width: 91%;
   }
 
